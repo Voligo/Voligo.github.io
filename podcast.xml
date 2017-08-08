@@ -1,0 +1,81 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+
+<channel>
+
+<title>萤火小时光</title>
+
+<link>https://Voligo.github.io/</link>
+
+<language>zh-CN</language>
+
+<lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+
+<copyright>&#xA9; 2017 萤火小时光</copyright>
+
+<itunes:subtitle>Подкаст о JavaScript'e, фронтенде и сопутствующих технологиях</itunes:subtitle>
+
+<itunes:author>Илья Заяц &amp; Артем Сущев</itunes:author>
+
+<itunes:keywords>ru, js, javascript, programming, development, web, html, css, frontend, it</itunes:keywords>
+
+<itunes:summary>Подкаст о JavaScript'e, фронтенде и сопутствующих технологиях</itunes:summary>
+
+<description>Подкаст о JavaScript'e, фронтенде и сопутствующих технологиях</description>
+
+<itunes:image href="https://Voligo.github.io/logo.jpg"/>
+
+<itunes:explicit>no</itunes:explicit>
+
+<itunes:owner>
+
+<itunes:name>Илья Заяц</itunes:name>
+
+<itunes:email>somebody32@gmail.com</itunes:email>
+
+</itunes:owner>
+
+<itunes:category text="Music" />
+
+{% for post in site.posts %}
+
+<item>
+
+<title>{{ post.title }}</title>
+
+<link>https://Voligo.github.io{{post.url}}</link>
+
+<description><![CDATA[{{ post.content }}]]></description>
+
+<itunes:author>Илья Заяц &amp; Артем Сущев</itunes:author>
+
+<itunes:subtitle>萤火小时光: {{ post.title }}</itunes:subtitle>
+
+<itunes:summary>{{ post.content | strip_html }}</itunes:summary>
+
+<itunes:image href="https://Voligo.github.io/logo.jpg"/>
+
+<enclosure url="http:{{ post.episode_url }}.mp3" length="{{ post.length }}" type="audio/mpeg" />
+
+<guid>http:{{ post.episode_url }}.mp3</guid>
+
+<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+
+<itunes:duration>{{ post.duration }}</itunes:duration>
+
+<itunes:explicit>no</itunes:explicit>
+
+<itunes:keywords>ru, js, javascript, programming, development, web, html, css, frontend, it</itunes:keywords>
+
+</item>
+
+{% endfor %}
+
+</channel>
+
+</rss>
