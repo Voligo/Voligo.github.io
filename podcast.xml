@@ -28,7 +28,7 @@ layout: null
 
 <description>Подкаст о JavaScript'e, фронтенде и сопутствующих технологиях</description>
 
-<itunes:image href="https://Voligo.github.io/logo.jpg"/>
+<itunes:image href="http://ou7uptay6.bkt.clouddn.com/logo.jpg"/>
 
 <itunes:explicit>no</itunes:explicit>
 
@@ -58,7 +58,7 @@ layout: null
 
 <itunes:summary>{{ post.content | strip_html }}</itunes:summary>
 
-<itunes:image href="https://Voligo.github.io/logo.jpg"/>
+<itunes:image href="http://ou7uptay6.bkt.clouddn.com/logo.jpg"/>
 
 <enclosure url="http:{{ post.episode_url }}.mp3" length="{{ post.length }}" type="audio/mpeg" />
 
