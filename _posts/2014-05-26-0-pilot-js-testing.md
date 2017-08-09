@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 0. Пилотный выпуск. Тестирование JS с Максимом Рыжиковым
-episode_url: http://ou7uptay6.bkt.clouddn.com/whiteeeen%20-%20あの頃～ジンジンバオヂュオニー～%20%28zerokoi%20ver.%29.mp3
+episode_url: http://ou7uptay6.bkt.clouddn.com/whiteeeen%20-%20あの頃～ジンジンバオヂュオニー～%20%28zerokoi%20ver.%29
 flipgif: http://frontflip.me/images/flipgifs/0.gif
 flipgif_desc: Мы всей командой договорились писать тесты с завтрашнего дня
 length: 8362964
