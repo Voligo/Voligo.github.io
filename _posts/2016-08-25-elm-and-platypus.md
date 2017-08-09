@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "20. Elm и ядовитый утконос. Игорь Капков"
-episode_url: //feeds.soundcloud.com/stream/279807341-frontflipjs-20-elm-i-yadovityy-utkonos-igor-kapkov
+episode_url: //ou7uptay6.bkt.clouddn.com/whiteeeen%20-%20あの頃～ジンジンバオヂュオニー～%20%28zerokoi%20ver.%29
 length: 44641948
 duration: "01:14:24"
 summary: Что такое язык elm, и почему о нем так много говорят последнее время? Какие проблемы js-разработчика он может решить? И правда ли утконос ядовит? Рассказывает Игорь Капков.
