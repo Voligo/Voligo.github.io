@@ -5,12 +5,8 @@ layout: default
 <section>
   <h1>{{ page.title }}</h1>
   <audio controls>
-    <source src="{{page.episode_url}}.mp3" type="audio/mpeg">
+    <source src="{{page.episode_url}}" type="audio/mpeg">
   </audio>
-  <p>
-    Прямая ссылка на <a href="{{page.episode_url}}.mp3" download>mp3</a>.
-  </p>
-
   {{ content }}
 </section>
 

@@ -10,7 +10,7 @@ layout: null
 
 <title>萤火小时光</title>
 
-<link>https://Voligo.github.io/</link>
+<link>https://fireflytime.github.io/</link>
 
 <language>zh-CN</language>
 
@@ -48,7 +48,7 @@ layout: null
 
 <title>{{ post.title }}</title>
 
-<link>https://Voligo.github.io{{post.url}}</link>
+<link>https://fireflytime.github.io{{post.url}}</link>
 
 <description><![CDATA[{{ post.content }}]]></description>
 
@@ -60,9 +60,9 @@ layout: null
 
 <itunes:image href="http://ou7uptay6.bkt.clouddn.com/logo.jpg"/>
 
-<enclosure url="http:{{ post.episode_url }}.mp3" length="{{ post.length }}" type="audio/mpeg" />
+<enclosure url="http:{{ post.episode_url }}" length="{{ post.length }}" type="audio/mpeg" />
 
-<guid>http:{{ post.episode_url }}.mp3</guid>
+<guid>http:{{ post.episode_url }}</guid>
 
 <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 
