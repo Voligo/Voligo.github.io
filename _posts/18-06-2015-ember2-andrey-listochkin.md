@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 13. Ember 2.0. Андрей Листочкин
-episode_url: //please.frontflip.me/frontflip_0014
-length: 45099102
-duration: "1:15:10"
+episode_url: http://ou7uptay6.bkt.clouddn.com/whiteeeen%20-%20あの頃～ジンジンバオヂュオニー～%20%28zerokoi%20ver.%29.mp3
+length: 8362964
+duration: "05:42"
 summary: Стоит ли переписывать свое приложение с выходом Ember.js 2.0, куда денутся контроллеры и как найти ember-разработчиков.
 ---
 
