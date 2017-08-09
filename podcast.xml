@@ -8,39 +8,39 @@ layout: null
 
 <channel>
 
-<title>萤火小时光</title>
+<title>Frontflip</title>
 
-<link>https://Voligo.github.io/</link>
+<link>http://frontflip.me/</link>
 
-<language>zh-CN</language>
+<language>ru</language>
 
 <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
 
-<copyright>&#xA9; 2017 萤火小时光</copyright>
+<copyright>&#xA9; 2014 Илья Заяц &amp; Артем Сущев</copyright>
 
-<itunes:subtitle>有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。</itunes:subtitle>
+<itunes:subtitle>Подкаст о JavaScript'e, фронтенде и сопутствующих технологиях</itunes:subtitle>
 
-<itunes:author>萤火小时光</itunes:author>
+<itunes:author>Илья Заяц &amp; Артем Сущев</itunes:author>
 
-<itunes:keywords>萤火虫, 小时光, 音乐</itunes:keywords>
+<itunes:keywords>ru, js, javascript, programming, development, web, html, css, frontend, it</itunes:keywords>
 
-<itunes:summary>有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。</itunes:summary>
+<itunes:summary>Подкаст о JavaScript'e, фронтенде и сопутствующих технологиях</itunes:summary>
 
-<description>有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。</description>
+<description>Подкаст о JavaScript'e, фронтенде и сопутствующих технологиях</description>
 
-<itunes:image href="http://ou7uptay6.bkt.clouddn.com/logo.jpg"/>
+<itunes:image href="http://please.frontflip.me/logo.jpg"/>
 
 <itunes:explicit>no</itunes:explicit>
 
 <itunes:owner>
 
-<itunes:name>萤火小时光</itunes:name>
+<itunes:name>Илья Заяц</itunes:name>
 
-<itunes:email>fenglichao34@gmail.com</itunes:email>
+<itunes:email>somebody32@gmail.com</itunes:email>
 
 </itunes:owner>
 
-<itunes:category text="Music" />
+<itunes:category text="Technology" />
 
 {% for post in site.posts %}
 
@@ -48,29 +48,29 @@ layout: null
 
 <title>{{ post.title }}</title>
 
-<link>https://Voligo.github.io{{post.url}}</link>
+<link>http://frontflip.me{{post.url}}</link>
 
 <description><![CDATA[{{ post.content }}]]></description>
 
-<itunes:author>萤火小时光</itunes:author>
+<itunes:author>Илья Заяц &amp; Артем Сущев</itunes:author>
 
-<itunes:subtitle>萤火小时光: {{ post.title }}</itunes:subtitle>
+<itunes:subtitle>Frontflip: {{ post.title }}</itunes:subtitle>
 
 <itunes:summary>{{ post.content | strip_html }}</itunes:summary>
 
-<itunes:image href="http://ou7uptay6.bkt.clouddn.com/logo.jpg"/>
+<itunes:image href="http://please.frontflip.me/logo.jpg"/>
 
-<enclosure url="{{ post.episode_url }}" length="{{ post.length }}" type="audio/mpeg" />
+<enclosure url="http:{{ post.episode_url }}.mp3" length="{{ post.length }}" type="audio/mpeg" />
 
-<guid>{{ post.episode_url }}</guid>
+<guid>http:{{ post.episode_url }}.mp3</guid>
 
 <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
 
-<itunes:duration>hh:mm:ss</itunes:duration>
+<itunes:duration>{{ post.duration }}</itunes:duration>
 
 <itunes:explicit>no</itunes:explicit>
 
-<itunes:keywords>萤火虫, 小时光, 音乐</itunes:keywords>
+<itunes:keywords>ru, js, javascript, programming, development, web, html, css, frontend, it</itunes:keywords>
 
 </item>
 
