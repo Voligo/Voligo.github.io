@@ -1,9 +1,63 @@
 ---
 layout: post
-title: "20. 【那些年的翻唱】——《棋子》"
-episode_url: http://ou7uptay6.bkt.clouddn.com/【那些年的翻唱】——《棋子》.m4a
-length: 8023165 
-duration: "00:08:21"
+title: "20. Elm и ядовитый утконос. Игорь Капков"
+episode_url: //feeds.soundcloud.com/stream/279807341-frontflipjs-20-elm-i-yadovityy-utkonos-igor-kapkov
+length: 44641948
+duration: "01:14:24"
 summary: Что такое язык elm, и почему о нем так много говорят последнее время? Какие проблемы js-разработчика он может решить? И правда ли утконос ядовит? Рассказывает Игорь Капков.
 ---
-作为男版梁静茹的方炯镔的《棋子》经过了董运昌的重新编曲与原唱王菲的版本在氛围上有着截然不同的感觉；而在唱法上，方炯镔略带缠绵的处理手法也表现出了一种进退两难的意境。
+
+В гостях [Игорь Капков](http://igas.me/).
+
+### Содержание выпуска
+
+<pre>
+01:55 краткая история elm
+05:03 какие проблемы js-разработчика решает elm?
+08:35 почему никогда не будет undefined is not a function?
+10:08 как начать работу, какие зависимости установить?
+13:32 как подходить к решению задачи?
+20:51 как хранить состояние приложения?
+22:40 работа с DOM/canvas/SVG?
+27:05 работа с сетью
+30:20 отладка и страдания с console.log
+37:55 интеграция с внешним js
+43:28 elm 0.17 и конец настоящей реактивности
+46:56 чего опасаться новичку и где искать помощь?
+52:12 тестирование
+58:36 философия elm, семантическое версионирование и деплой
+1:02:40 пики
+</pre>
+
+### Ссылки из выпуска
+
+- [Changelog #187: Redux, React, and Functional JavaScript with Dan Abramov](https://changelog.com/187/)
+- [Твит Джона Кармака](https://twitter.com/ID_AA_Carmack/status/735197548034412546)
+- [Elm Guide](http://guide.elm-lang.org/)
+- [Daily Drip](https://www.dailydrip.com/)
+- [Elm in Action](https://manning.com/books/elm-in-action)
+- [Elm Weekly](http://www.elmweekly.nl/)
+- [Haskell Book](http://haskellbook.com/)
+
+### Picks
+
+*Илья*
+
+- [Подкаст Science Vs.](https://gimletmedia.com/show/science-vs/)
+- [Подкаст Surprisingly Awesome](https://gimletmedia.com/show/surprisingly-awesome/)
+
+*Артем*
+
+- [Draft.js](https://facebook.github.io/draft-js/)
+- [StaticGen](http://www.staticgen.com/)
+
+*Игорь*
+
+- каллиграфия
+- скалолазание
+- [Tough Mudder](https://toughmudder.com/)
+- [Ссылка для желающих переехать в Австралию](mailto:igor.kapkov@hivetec.com.au)
+
+У нас есть страница с [темами для будущих выпусков](http://frontflip.me/possible_themes.html). Рассказывайте друзьям и приходите сами!
+
+Не забывайте оценивать нас в [iTunes](https://itunes.apple.com/ru/podcast/frontflip/id884716456) и подписываться в [твитере](https://twitter.com/frontflip_js).
