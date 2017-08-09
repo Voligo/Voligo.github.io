@@ -22,7 +22,7 @@ layout: null
 
 <itunes:author>萤火小时光</itunes:author>
 
-<itunes:keywords>ru, js, javascript, programming, development, web, html, css, frontend, it</itunes:keywords>
+<itunes:keywords>萤火虫, 小时光, 音乐</itunes:keywords>
 
 <itunes:summary>有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。</itunes:summary>
 
@@ -34,9 +34,9 @@ layout: null
 
 <itunes:owner>
 
-<itunes:name>Илья Заяц</itunes:name>
+<itunes:name>萤火小时光</itunes:name>
 
-<itunes:email>somebody32@gmail.com</itunes:email>
+<itunes:email>fenglichao34@gmail.com</itunes:email>
 
 </itunes:owner>
 
@@ -52,7 +52,7 @@ layout: null
 
 <description><![CDATA[{{ post.content }}]]></description>
 
-<itunes:author>Илья Заяц &amp; Артем Сущев</itunes:author>
+<itunes:author>萤火小时光</itunes:author>
 
 <itunes:subtitle>萤火小时光: {{ post.title }}</itunes:subtitle>
 
@@ -70,7 +70,7 @@ layout: null
 
 <itunes:explicit>no</itunes:explicit>
 
-<itunes:keywords>ru, js, javascript, programming, development, web, html, css, frontend, it</itunes:keywords>
+<itunes:keywords>萤火虫, 小时光, 音乐</itunes:keywords>
 
 </item>
 
