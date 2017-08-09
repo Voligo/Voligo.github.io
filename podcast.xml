@@ -10,7 +10,7 @@ layout: null
 
 <title>萤火小时光</title>
 
-<link>https://fireflytime.github.io/</link>
+<link>https://Voligo.github.io/</link>
 
 <language>zh-CN</language>
 
@@ -48,7 +48,7 @@ layout: null
 
 <title>{{ post.title }}</title>
 
-<link>https://fireflytime.github.io{{post.url}}</link>
+<link>https://Voligo.github.io{{post.url}}</link>
 
 <description><![CDATA[{{ post.content }}]]></description>
 
