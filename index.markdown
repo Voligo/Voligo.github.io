@@ -3,11 +3,7 @@ layout: default
 title: Frontflip Podcast
 ---
 
-## Мы ищем таланты
-Мы составили <a href='/possible_themes.html'>список тем</a>, которые бы нам интересно обсудить в новых выпусках.   
-Изучайте, передавайте друзьям, приходите в гости.
-
-## Выпуски
+## 节目
 
 <ul class="posts">
   {% for post in site.posts %}

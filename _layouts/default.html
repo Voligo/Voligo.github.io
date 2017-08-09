@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Frontflip Podcast</title>
+    <title>萤火小时光</title>
 
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
@@ -12,40 +12,46 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <meta property="og:locale" content="ru_RU" />
-    <meta property="og:site_name" content="Frontflip podcast" />
+    <meta property="og:locale" content="zh-CN" />
+    <meta property="og:site_name" content="萤火小时光" />
     <meta property="og:title" content="{{page.title}}" />
     {% if page.episode_url %}
       <meta property="og:audio"              content="http:{{page.episode_url}}.mp3">
       <meta property="og:audio:secure_url"   content="https:{{page.episode_url}}.mp3">
       <meta property="og:audio:type"         content="audio/mp3">
     {% endif %}
-    <meta property="og:image" content="http://frontflip.me/images/logo.jpg" />
+    <meta property="og:image" content="http://ou7uptay6.bkt.clouddn.com/logo.jpg" />
     {% if page.summary %}
       <meta property="og:description" content="{{page.summary}}" />
     {% else %}
-      <meta property="og:description" content="Подкаст о JavaScript'e, фронтенде и сопутствующих технологиях" />
+      <meta property="og:description" content="有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。" />
     {% endif %}
 
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <a href="/"><h1>Frontflip Podcast</h1></a>
-        <p><small>Подкаст о JavaScript'e, фронтенде и сопутствующих технологиях</small></p>
-        <img src="/images/logo.jpg" alt="Frontflip podcast">
+        <a href="/"><h1>萤火小时光</h1></a>
+        <p><small>有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。</small></p>
+        <img src="/images/logo.jpg" alt="萤火小时光">
         <p><a href="/podcast.xml">RSS</a></p>
-        <p><a href="https://twitter.com/frontflip_js">Twitter</a></p>
+        <p><a href="https://twitter.com/">Twitter</a></p>
         <p><a href="https://itunes.apple.com/ru/podcast/frontflip/id884716456">iTunes</a></p>
-        <p><a href="https://soundcloud.com/frontflipjs">Soundcloud</a></p>
-        <p><a href="mailto:somebody32@gmail.com,suschev.artem@gmail.com?subject=[Гость]&body=Привет! Буду рад записать подкаст с вами на тему ">Стать гостем</a></p>
+        <p><a href="https://soundcloud.com/">Soundcloud</a></p>
+        <p><a href="mailto:fenglichao34@gmail.com?subject=对萤火小时光播客的建议&body=">邮箱</a></p>
       </header>
       <section class=top>
         {{ content }}
       </section>
       <footer>
-        <p><small>Авторы: <a href="https://twitter.com/23ydobemos">Илья Заяц</a> &amp; <a href="https://twitter.com/asuschev">Артем Сущев</a></small></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+          <footer>
+              <div class="container-fluid">
+                  <p class="copyright">
+                  Copyright © {{site.time | date: "%Y" }} <a href="https://github.com/MokumokuCloud">萤火小时光</a> All Rights Reserved.
+                  </p>
+              </div>
+          </footer>
+
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
