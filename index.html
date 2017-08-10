@@ -2,50 +2,49 @@
 layout: default
 ---
 
-{% comment %}
-{% include notice.html %}
-{% endcomment %}
-
 <div class="home">
+  <div class="latest-entry">
+    {% assign post = site.posts.first %}
+    <div class="post-date">
+      <div class="day">{{ post.date | date: "%-d" }}</div>
+      <div class="month">{{ post.date | date: "%b/%Y" }}</div>
+    </div>
+    <div class="entry-info">
+      <h1 class="entry-title">
+      {% assign content = post.content %}
+      {% if post.title %}
+      <a href="{{ root_url }}{{ post.url }}">#{{ post.episodeid }}. {{ post.title }}</a>
+      {% endif %}
+      </h1>
+      <div class="post-meta"><a href="{{ post.audiolink }}">Download Episode</a> • <a href="{{ root_url }}{{ post.url }}#disqus_thread">Comments</a></div>
+    
+      <audio class="episode-player" controls="" preload="meta">
+        <source src="{{ post.audiolink }}" />
+      </audio>
+      <div class="entry-content">{{ content }}</div>
+    </div>
+  </div>
 
   <ul class="post-list">
-    {% for post in site.posts %}
-      <li class="post">
-        <div class="row">
-          <div class="post-number col-sm-1 col-xs-12">
-            <a href="{{ post.url | prepend: site.baseurl }}">
-              {{ post.number }}
-            </a>
-          </div>
-          <div class="col-sm-11 col-xs-12">
-            <h2 class="post-title">
-              <a href="{{ post.url | prepend: site.baseurl }}">
-                {{ post.title }}
-              </a>
-            </h2>
-            <ul class="list-inline post-meta">
-              <li class="post-date">
-                <span class="post-date-title">投稿日：</span>
-                <span>{{ post.date | date: "%Y年%-m月%-d日" }}</span>
-              </li>
-              <li class="post-duration">
-                <span class="post-duration-title">時間：</span>
-                <span>{{ post.duration }}</span>
-              </li>
-            </ul>
-            <div class="post-excerpt">
-              {{ post.description }}
-            </div>
-            <div class="home-members">
-              {% for member_id in post.members %}
-                {% assign member = site.members[member_id] %}
-                <img src="{{ member.icon }}" alt="{{ member_id }}" title="{{ member_id }}" class="home-member-icon" width="40" height="40">
-              {% endfor %}
-            </div>
-          </div>
+    {% for post in site.posts offset:1 %}
+      <li>
+        <div class="post-date">
+          <div class="day">{{ post.date | date: "%-d" }}</div>
+          <div class="month">{{ post.date | date: "%b/%Y" }}</div>
+        </div>
+        <div class="post-info">
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">#{{ post.episodeid }}. {{ post.title }}</a>
+          </h2>
+          <div class="post-meta"><a href="{{ post.audiolink }}">Download Episode</a> • <a href="{{ root_url }}{{ post.url }}#disqus_thread">Comments</a></div>
+          <audio class="episode-player" controls="">
+            <source src="{{ post.audiolink }}" />
+          </audio>
+        </div>
+        <div class="post-summary">
+          {{ post.excerpt }}
         </div>
       </li>
     {% endfor %}
   </ul>
-
 </div>
