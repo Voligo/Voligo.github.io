@@ -7,8 +7,7 @@ layout: null
     <title>{{ site.title | xml_escape }}</title>
     <description>{{ site.description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/</link>
-    <language>zh-CN</language>
-    <explicit>no</explicit>
+    <language>ru</language>
     <itunes:subtitle>DFW chapter</itunes:subtitle>
 
     <itunes:author>Steven Gangstead &amp; Andrew Rubalcaba</itunes:author>
@@ -22,13 +21,11 @@ layout: null
     <itunes:name>Steven Gangstead</itunes:name>
 
     <itunes:email>flatMapSociety@gangstead.com</itunes:email>
+    <itunes:explicit>no</itunes:explicit>
 
     </itunes:owner>
 
     <itunes:image href="http://flatmapsociety.github.io/images/flatmap-logo-big.jpg" />
-    
-    <itunes:explicit>no</itunes:explicit>
-    <itunes:language>zh_CN</itunes:language>
 
     <itunes:category text="Technology" />
 
