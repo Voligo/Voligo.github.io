@@ -1,91 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>萤火小时光</title>
 
-    <link rel="stylesheet" href="/stylesheets/styles.css">
-    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    {% include head.html %}
 
-    <meta property="og:locale" content="zh-CN" />
-    <meta property="og:site_name" content="萤火小时光" />
-    <meta property="og:title" content="{{page.title}}" />
-    {% if page.episode_url %}
-      <meta property="og:audio"              content="http:{{page.episode_url}}.mp3">
-      <meta property="og:audio:secure_url"   content="https:{{page.episode_url}}.mp3">
-      <meta property="og:audio:type"         content="audio/mp3">
-    {% endif %}
-    <meta property="og:image" content="http://ou7uptay6.bkt.clouddn.com/logo.jpg" />
-    {% if page.summary %}
-      <meta property="og:description" content="{{page.summary}}" />
-    {% else %}
-      <meta property="og:description" content="有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。" />
-    {% endif %}
+    <body>
+        {% include nav.html %}
 
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <a href="/"><h1>萤火小时光</h1></a>
-        <p><small>有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。</small></p>
-        <img src="/images/logo.jpg" alt="萤火小时光">
-        <p><a href="/podcast.xml">RSS</a></p>
-<!--        <p><a href="https://twitter.com/">Twitter</a></p>-->
-        <p><a href="https://itunes.apple.com/cn/podcast/萤火小时光/id1262871692?mt=2">iTunes</a></p>
-<!--        <p><a href="https://soundcloud.com/">Soundcloud</a></p>-->
-        <p><a href="mailto:fenglichao34@gmail.com?subject=对萤火小时光播客的建议&body=">邮箱</a></p>
-      </header>
-               <section class=top>
-        {{ content }}
-      </section>
-               <footer>
-                   <div class="container-fluid">
-                       <p class="copyright">
-                       Copyright © {{site.time | date: "%Y" }} <a href="https://fireflytime.github.io">萤火小时光</a> All Rights Reserved.
-                       </p>
-                   </div>
-               </footer>
+            {{ content }}
 
-          </div>
-    <script src="javascripts/scale.fix.js"></script>
-      <script type="text/javascript">
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-      <script type="text/javascript">
-        try {
-          var pageTracker = _gat._getTracker("UA-51355255-1");
-        pageTracker._trackPageview();
-        } catch(err) {}
-      </script>
-      <script type="text/javascript">
-          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-          var disqus_shortname = 'frontflip'; // required: replace example with your forum shortname
-
-          /* * * DON'T EDIT BELOW THIS LINE * * */
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-      </script>
-      <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'frontflip'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script'); s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-      </script>
-      <a href="https://plus.google.com/102969747807694079652" rel="publisher" style="display:none">Google+</a>
-  </body>
+        {% include footer.html %}
+        {% include js.html %}
+    </body>
 </html>
