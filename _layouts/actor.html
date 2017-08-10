@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang={{ site.language }}>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <main class="main">
+      <div class="container">
+        <article class="article card">
+          <header class="article-header card-header">
+            <div class="card-heading">
+              <a href="{{ '/actors' | prepend:site.baseurl }}">
+                Actors
+              </a>
+            </div>
+            <img src="{{ page.image_url }}" alt="{{ page.title }}" class="actor-image" width="80" height="80">
+            <h1 class="card-heading">
+              {{ page.title }}
+            </h1>
+            <div class="article-header-note">
+              <p class="author-bio">{{ page.description }}</p>
+              {% if page.twitter_username %}
+                <p>
+                  {% include twitter_follow.inc username=page.twitter_username %}
+                </p>
+              {% endif %}
+            </div>
+          </header>
+
+          <section class="card-body markdown">
+            {{ content }}
+          </section>
+
+          <section class="card-body markdown">
+            <h2>
+              Episodes
+            </h2>
+
+            {% assign appeared_posts = '' | split: '.' %}
+            {% for post in site.posts %}
+              {% if post.actor_ids contains page.actor_id %}
+                {% assign appeared_posts = appeared_posts | push: post %}
+              {% endif %}
+            {% endfor %}
+
+            {% if 0 < appeared_posts.size %}
+            <ul>
+              {% for post in appeared_posts %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title | escape }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+            {% else %}
+            <p>
+              not appeared yet.
+            </p>
+            {% endif %}
+
+          </section>
+
+        </article>
+      </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

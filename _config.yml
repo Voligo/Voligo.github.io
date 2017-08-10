@@ -1,5 +1,39 @@
-name: WindFront
-description: "A weekly wrap up of the world of energy. We deep dive to find the latest concerning the Wind, Solar and Power Industry in Australia and around the world."
-pygments: false
-permalink: /:title
-url: http://www.windfront.com
+collections:
+  actors:
+    output: true
+    permalink: /:collection/:path/
+defaults:
+  - scope:
+      path: ""
+      type: actors
+    values:
+      layout: actor
+  - scope:
+      path: ""
+      type: posts
+    values:
+      is_post: true
+author: そうっすね制作委員会
+subtitle: エンジニアわいわいポッドキャスト「そうっすね」
+description: テクノロジーと世の中についてエンジニア達が雑談するポッドキャストです。
+description_long: ポッドキャストを通じて他人と意見を揉んでいきたいエンジニアの集い
+email: miyan@t-p.jp
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.txt
+  - README.md
+  - vendor
+hashtag: soussune
+itunes_podcast_url: https://itunes.apple.com/jp/podcast/soussune/id1247135079
+keywords: soussune,tech,technology,keyboard,web,development,developer
+language: ja
+markdown: kramdown
+permalink: /episode/:title
+sass:
+  sass_dir: css
+timezone: Asia/Tokyo
+title: soussune
+url: https://soussune.com # the base hostname & protocol for your site
+audiourl: https://soussune.blob.core.windows.net/audio
+twitter_username: soussunefm

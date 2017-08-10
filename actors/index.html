@@ -1,0 +1,62 @@
+---
+title: actors
+description: soussuneの出演者一覧
+---
+<!DOCTYPE html>
+<html lang={{ site.language }}>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <main class="main">
+      <div class="container">
+        <article class="article card">
+          <header class="article-header card-header">
+            <h1 class="card-heading">
+              Actors
+            </h1>
+            <div class="article-header-note">
+              <p>{{ page.description }}</p>
+            </div>
+          </header>
+
+          <section class="card-body markdown actors">
+
+            <ul class="actor-links">
+
+{% assign post_actor_ids =  site.posts | map: 'actor_ids' | join: ','  | split: ',' | sort %}
+{% assign actor_and_count = '' | split: '.' %}
+
+{% for actor in site.actors %}
+  {% assign count = 0 %}
+  {% for post_actor_id in post_actor_ids %}
+    {% if actor.actor_id == post_actor_id %}
+      {% assign count = count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+  {% include mkhash.inc actor = actor count = count %}
+  {% assign actor_and_count = actor_and_count | push: h %}
+{% endfor %}
+
+{% assign sorted_actor_and_count = actor_and_count | sort: 'count' %}
+
+              {% for item in sorted_actor_and_count reversed %}
+                {% assign actor = item.actor %}
+              <li class="actor-links__item">
+                <a href="{{ actor.url }}">
+                  <img src="{{ actor.image_url | prepend:site.baseurl }}" alt="{{ actor.title }}" class="actor-image" width="80" height="80">
+                  <br>
+                  {{ actor.title }}
+                  ({{ item.count }})
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+
+          </section>
+
+        </article>
+      </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>
