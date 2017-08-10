@@ -1,15 +1,59 @@
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
-title: the flatMap Society
-email: flatmapsociety@gangstead.com
-description: > # this means to ignore newlines until "baseurl:"
-  Half hour of tech for DFW
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://flatmapsociety.github.io/" # the base hostname & protocol for your site
-twitter_username: flatMapSociety
-github_username:  flatMapSociety
-soundcloud_username: flatmap-society
-itunes_username: flatMap Society
-itunes_link: https://itunes.apple.com/us/podcast/the-flatmap-society/id929940579
-permalink: /:year/:month/:title.html
+baseurl: "/microcast" # repository name
+url: "http://soitscometothis.net" # Either custom domain or http://GithubUsername.github.io
+
+# Can I delete these or are they still needed?
+twitter_username: LK64076007A
+github_username:  LK64076007A  
+
+# Podcast Feed Settings
+title:          "Driftwood" # name of your podcast
+email:          michael@laccheo.com # CHANGE
+description:    "A short form podcast hosted completely on Github." # CHANGE
+subtitle:       "Size isn't everything" # CHANGE
+lang:           en-us
+author:         Michael # CHANGE
+copyright:      "&#x2117; &amp; &#xA9; 2016"
+
+
+# Outputting
+permalink: /:title/
+
 # Build settings
 markdown: kramdown
+timezone: America/New_York
+
+# Basic
+
+# Navigation
+nav:
+  - name:           "About"
+    href:           "/microcast/about" # CHANGE to match your repository
+  - name:           "Feed"
+    href:           "/microcast/podcast.rss" # CHANGE to match your repository
+  - name:           "iTunes"
+    href:           "https://itunes.apple.com/us/podcast/driftwood/id1080157963" #CHANGE
+  - name:           "Overcast"
+    href:           "https://overcast.fm/itunes1080157963/driftwood" # CHANGE
+
+# Sass
+sass:
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
