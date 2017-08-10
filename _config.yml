@@ -1,10 +1,10 @@
 # Site settings
-title: San's world
-email: hueidou163@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+title: 萤火小时光
+email: fenglichao34@gmail.com
+description: 有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。> # this means to ignore newlines until "baseurl:"
   个人博客。
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://san.sanrabbit.com" # the base hostname & protocol for your site
+url: "https://voligo.github.io" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
 github_username:  hueidou
 disqus: hueidou
