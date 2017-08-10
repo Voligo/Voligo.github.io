@@ -6,26 +6,27 @@
 
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: avenir,'avenir next',helvetica,arial,sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-line-height: 1.6;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$text-color:       #444;
+$background-color: #fff;
+$brand-color:      #004b8c;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    800px;
+$content-width:    600px;
 
-$on-palm:          600px;
-$on-laptop:        800px;
+$sm-margin:        8px;
+$md-margin:        16px;
+$lg-margin:        36px;
 
 
 
@@ -48,5 +49,11 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
+        "header",
+        "notice",
+        "index",
+        "post",
+        "page",
+        "footer",
         "syntax-highlighting"
 ;

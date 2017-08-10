@@ -1,15 +1,39 @@
 # Site settings
-title: 萤火小时光
-email: fenglichao34@gmail.com
-description: 有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。> # this means to ignore newlines until "baseurl:"
-  个人博客。
+title: くもキャスト
+# email: your-email@domain.com
+description: プログラミングを学ぶ若者たちがゆるくつながってお話をするポッドキャストです
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://voligo.github.io" # the base hostname & protocol for your site
-#twitter_username: jekyllrb
-github_username:  hueidou
-disqus: hueidou
+url: "http://kumocast.jp" # the base hostname & protocol for your site
+twitter_username: kumocast
+github_username: kumocast
+
+members:
+  gaaamii:
+    icon: https://avatars1.githubusercontent.com/u/4538656?v=3&s=80
+  karur4n:
+    icon: https://avatars2.githubusercontent.com/u/6816398?v=3&s=80
+  yoshiso44:
+    icon: https://avatars3.githubusercontent.com/u/3690884?v=3&s=80
+  _ayato_p:
+    icon: https://avatars3.githubusercontent.com/u/1432156?v=3&s=80
+  kimihito_:
+    icon: https://avatars2.githubusercontent.com/u/758704?v=3&s=80
+  yaginuuu:
+    icon: https://avatars3.githubusercontent.com/u/3440182?v=3&s=80
+  alea12:
+    icon: https://avatars0.githubusercontent.com/u/1287191?v=3&s=80
+  moutend:
+    icon: https://avatars2.githubusercontent.com/u/5410013?v=3&s=80
+  vsanna2:
+    icon: https://avatars2.githubusercontent.com/u/7834445?v=3&s=80
+  daizplus:
+    icon: https://avatars0.githubusercontent.com/u/4409909?v=3&s=80
+  keicoro:
+    icon: https://i.gyazo.com/fc49c7db1be504a754dfd57ca0620edb.jpg
 
 # Build settings
-markdown: rdiscount
-
-permalink: /:year/:month/:day/:title.html
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude: [bundle]
