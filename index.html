@@ -1,48 +1,20 @@
 ---
-layout: default 
-title: Podcast 
-permalink: /
+layout: default
+title: Weekly Wind and Renewables Podcast
 ---
 
-<div class="container">
-  <div class="row">
-    <div id="posts" class="col-md-12">
-      <h2> # Podcasts </h2> 
-      <p class="rss-subscribe"><i class="fa fa-rss"></i> 通过 <a href="{{ "/podcast.xml" | prepend: site.baseurl }}">Podcast</a> 订阅音频.</p>
-      <p>本站内容按 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/deed.zh">CC-BY-NC-SA 协议</a> 发布。</p>
-
-      {% for post in site.posts %}
-      <!-- Blog Post -->
-      <div class="row">
-        {% if post.thumb %}
-        <div class="col-md-8">
-          {% else %}
-          <div class="col-md-12">
-            {% endif %}
-            <a href="{{ post.url | prepend: site.baseurl }}"><h3 class="ctitle">{{ post.title }}</h3></a>
-            <div class="post-meta">
-              <i class="fa fa-calendar"></i> <strong>时间</strong>: {{post.date | date: "%Y-%-m-%-d"}}
+    {% for post in site.posts %}
+      <div class="pure-g blog-item">
+        <div class="pure-u">
+            <div class="blog-item-inner">
+                <h2><a href="{{ post.url }}">{{ post.title }} &raquo;</a></h2>
+                {% if post.mp3 %}
+                    <audio controls="controls" preload="auto">  
+                        <source src="{{site.url}}/downloads/{{post.mp3}}" type="audio/mp3"/>  
+                    </audio> 
+                {% endif %}
             </div>
-                {{ post.content | truncatewords:50 | strip_html }}
-            <p><a href="{{ post.url | prepend: site.baseurl }}">[Read More]</a></p>
-          </div>
-          {% if post.thumb %}
-          <div class="col-md-4">
-            <img class="thumbnail" src="{%if post.thumb contains '://' %}{{post.thumb}}{% else %}{{"/assets/img/podcast/" | prepend: site.baseurl}}{{post.thumb}}{%endif%}" />
-          </div>
-          {% endif %}
-        </div>
-        <div class="hline"></div>
-        <div class="spacing"></div>
-        {% endfor %}
-
-        <p class="rss-subscribe"><i class="fa fa-rss"></i> Subscribe to this blog <a href="{{ "/podcast.xml" | prepend: site.baseurl }}">via Podcast</a>.</p>
+        </div>    
       </div>
-    </div>
-  </div>
-</div>
+    {% endfor %}
 
-
-<!--
-  vim: ts=2 sts=2 sw=2 expandtab
--->
