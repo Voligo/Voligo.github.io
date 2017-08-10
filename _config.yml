@@ -34,6 +34,6 @@ sass:
   sass_dir: css
 timezone: Asia/Tokyo
 title: soussune
-url: https://soussune.com # the base hostname & protocol for your site
-audiourl: https://soussune.blob.core.windows.net/audio
+url: https://voligo.github.io/ # the base hostname & protocol for your site
+audiourl: 
 twitter_username: soussunefm
