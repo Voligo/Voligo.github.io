@@ -1,39 +1,59 @@
-collections:
-  actors:
-    output: true
-    permalink: /:collection/:path/
-defaults:
-  - scope:
-      path: ""
-      type: actors
-    values:
-      layout: actor
-  - scope:
-      path: ""
-      type: posts
-    values:
-      is_post: true
-author: そうっすね制作委員会
-subtitle: エンジニアわいわいポッドキャスト「そうっすね」
-description: テクノロジーと世の中についてエンジニア達が雑談するポッドキャストです。
-description_long: ポッドキャストを通じて他人と意見を揉んでいきたいエンジニアの集い
-email: miyan@t-p.jp
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE.txt
-  - README.md
-  - vendor
-hashtag: soussune
-itunes_podcast_url: https://itunes.apple.com/jp/podcast/soussune/id1247135079
-keywords: soussune,tech,technology,keyboard,web,development,developer
-language: ja
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+baseurl: "/microcast" # repository name
+url: "http://soitscometothis.net" # Either custom domain or http://GithubUsername.github.io
+
+# Can I delete these or are they still needed?
+twitter_username: LK64076007A
+github_username:  LK64076007A  
+
+# Podcast Feed Settings
+title:          "Driftwood" # name of your podcast
+email:          michael@laccheo.com # CHANGE
+description:    "A short form podcast hosted completely on Github." # CHANGE
+subtitle:       "Size isn't everything" # CHANGE
+lang:           en-us
+author:         Michael # CHANGE
+copyright:      "&#x2117; &amp; &#xA9; 2016"
+
+
+# Outputting
+permalink: /:title/
+
+# Build settings
 markdown: kramdown
-permalink: /episode/:title
+timezone: America/New_York
+
+# Basic
+
+# Navigation
+nav:
+  - name:           "About"
+    href:           "/microcast/about" # CHANGE to match your repository
+  - name:           "Feed"
+    href:           "/microcast/podcast.rss" # CHANGE to match your repository
+  - name:           "iTunes"
+    href:           "https://itunes.apple.com/us/podcast/driftwood/id1080157963" #CHANGE
+  - name:           "Overcast"
+    href:           "https://overcast.fm/itunes1080157963/driftwood" # CHANGE
+
+# Sass
 sass:
-  sass_dir: css
-timezone: Asia/Tokyo
-title: soussune
-url: https://voligo.github.io/ # the base hostname & protocol for your site
-audiourl: 
-twitter_username: soussunefm
+  style:            :compressed
+
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
