@@ -15,8 +15,8 @@ layout: null
     <itunes:explicit>no</itunes:explicit>
     <itunes:image href="http://ou7uptay6.bkt.clouddn.com/logo.jpg" />
     <itunes:keywords>萤火虫,小时光,Podcast</itunes:keywords>
-    <itunes:subtitle>有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。</itunes:subtitle>
-    <itunes:summary>有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。</itunes:summary>
+    <itunes:subtitle>{{ site.description | xml_escape }}</itunes:subtitle>
+    <itunes:summary>{{ site.description | xml_escape }}</itunes:summary>
     <itunes:category text="Music">
     </itunes:category>
     <itunes:author>萤火宝宝</itunes:author>
