@@ -1,0 +1,50 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+	<channel>
+		<title>{{ site.title }}</title>
+		<description>{{ site.description }}</description>
+		<itunes:summary>{{ site.description }}</itunes:summary>
+		<link>{{ site.url }}</link>
+		<language>en</language>
+		<managingEditor>{{ site.managerEmail }} ({{ site.managerName }})</managingEditor>
+		<webMaster>{{ site.managerEmail }} ({{ site.managerName }})</webMaster>
+		<copyright>{{site.time | date: "%Y" }} {{ site.organizationName }}</copyright>
+		<pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+		<lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+		<image>
+			<link>{{ site.url}}</link>
+			<url>{{ site.url }}/{{ site.squareLogo}}</url>
+			<title>{{ site.title }}</title>
+		</image>
+		<itunes:subtitle>{{ site.podcastSubtitle }}</itunes:subtitle>
+		<itunes:author>{{ site.organizationName }}</itunes:author>
+		<itunes:keywords></itunes:keywords>
+		<itunes:owner>
+			<itunes:name>{{ site.managerName}}</itunes:name>
+			<itunes:email>{{ site.managerEmail}}</itunes:email>
+		</itunes:owner>
+		<itunes:image href="{{ site.url }}/{{ site.squareLogo}}" />
+		<itunes:category text="Comedy"></itunes:category>
+		<itunes:category text="Education"></itunes:category>
+		<itunes:explicit>clean</itunes:explicit>
+		{% for post in site.posts %}
+			<item>
+				<title>{{ post.title }}</title>
+				<link>{{ site.url }}/{{ post.url }}</link>
+				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+				<guid isPermaLink="true">http://www.podtrac.com/pts/redirect.mp3/{{ post.link }}</guid>
+				<enclosure url="http://www.podtrac.com/pts/redirect.mp3/{{ post.link }}" length="{{ post.size }}" type="audio/mp3"/>
+				<itunes:author>{{ post.speaker }}</itunes:author>
+				<itunes:subtitle></itunes:subtitle>
+				<itunes:duration>{{ post.length }}</itunes:duration>
+				<itunes:keywords>{{ post.keywords }}</itunes:keywords>
+				<itunes:image href="{% if post.image %}{{ site.url }}/{{ post.image }}{% else %}{{ site.url }}/{{site.squareLogo}}{% endif %}" />
+				<itunes:explicit>clean</itunes:explicit>
+				<description>{{ post.content | xml_escape }}</description>
+				<itunes:summary>{{ post.content | xml_escape }}</itunes:summary>
+			</item>
+		{% endfor %}
+	</channel>
+</rss>
