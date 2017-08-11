@@ -2,23 +2,50 @@
 layout: default
 ---
 
+{% comment %}
+{% include notice.html %}
+{% endcomment %}
+
 <div class="home">
 
-  <div class="posts">
-    {% for post in paginator.posts %}
-      <div class="post">
-        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link"><h3 class="h2 post-title">{{ post.title }}</h3></a>
-        <p class="post-summary">
-          {% if post.summary %}
-            {{ post.summary }}
-          {% else %}
-            {{ post.excerpt }}
-          {% endif %}
-        </p>
-      </div>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li class="post">
+        <div class="row">
+          <div class="post-number col-sm-1 col-xs-12">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              {{ post.number }}
+            </a>
+          </div>
+          <div class="col-sm-11 col-xs-12">
+            <h2 class="post-title">
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+              </a>
+            </h2>
+            <ul class="list-inline post-meta">
+              <li class="post-date">
+                <span class="post-date-title">投稿日：</span>
+                <span>{{ post.date | date: "%Y年%-m月%-d日" }}</span>
+              </li>
+              <li class="post-duration">
+                <span class="post-duration-title">時間：</span>
+                <span>{{ post.duration }}</span>
+              </li>
+            </ul>
+            <div class="post-excerpt">
+              {{ post.description }}
+            </div>
+            <div class="home-members">
+              {% for member_id in post.members %}
+                {% assign member = site.members[member_id] %}
+                <img src="{{ member.icon }}" alt="{{ member_id }}" title="{{ member_id }}" class="home-member-icon" width="40" height="40">
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
 
-  {% include pagination.html %}
 </div>

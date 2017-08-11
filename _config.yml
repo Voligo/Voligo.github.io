@@ -1,54 +1,39 @@
-title: Talking Dudes
-organizationName: Talking Dudes
-podcastSubtitle:
-managerName: Adam Harris
-managerEmail: aharris88@gmail.com
-squareLogo: assets/uploads/logo.jpg
-description: "A podcast with two dudes talking. Season 2 is all about emotions and relationships from the perspective of two Christian men. Season 1 was just two dudes talking about whatever: technology, movies, and life."
-baseurl: ""
-url: "http://www.talkingdudes.com"
+# Site settings
+title: くもキャスト
+# email: your-email@domain.com
+description: プログラミングを学ぶ若者たちがゆるくつながってお話をするポッドキャストです
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://kumocast.jp" # the base hostname & protocol for your site
+twitter_username: kumocast
+github_username: kumocast
 
-# Google analytics
-google_analytics: UA-31980509-10
-
-# Optional features
-animated:           false
-show_related_posts: false
-show_post_footers:  false
-
-# Disqus post comments
-# (leave blank to disable Disqus)
-disqus_shortname:
-
-# Social icons
-show_social_icons: false
-github_username:
-stackoverflow_id:
-twitter_username:
-google_plus_id:
-linkedin_username:
-bitcoin_url:
-paypal_url:
-flattr_button:
-
-# Post sharing icons
-show_sharing_icons: false
-share_text: 'Share this post!'
-# Change to 'true' to enable individual icons
-share_facebook: false
-share_twitter: false
-share_googleplus: false
-share_linkedin: false
-share_digg: false
-share_tumblr: false
-share_reddit: false
-share_stumbleupon: false
-share_hackernews: false
+members:
+  gaaamii:
+    icon: https://avatars1.githubusercontent.com/u/4538656?v=3&s=80
+  karur4n:
+    icon: https://avatars2.githubusercontent.com/u/6816398?v=3&s=80
+  yoshiso44:
+    icon: https://avatars3.githubusercontent.com/u/3690884?v=3&s=80
+  _ayato_p:
+    icon: https://avatars3.githubusercontent.com/u/1432156?v=3&s=80
+  kimihito_:
+    icon: https://avatars2.githubusercontent.com/u/758704?v=3&s=80
+  yaginuuu:
+    icon: https://avatars3.githubusercontent.com/u/3440182?v=3&s=80
+  alea12:
+    icon: https://avatars0.githubusercontent.com/u/1287191?v=3&s=80
+  moutend:
+    icon: https://avatars2.githubusercontent.com/u/5410013?v=3&s=80
+  vsanna2:
+    icon: https://avatars2.githubusercontent.com/u/7834445?v=3&s=80
+  daizplus:
+    icon: https://avatars0.githubusercontent.com/u/4409909?v=3&s=80
+  keicoro:
+    icon: https://i.gyazo.com/fc49c7db1be504a754dfd57ca0620edb.jpg
 
 # Build settings
-permalink: /:title
-paginate:     3
-sass:
-  compressed: true
-gems:
-  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude: [bundle]

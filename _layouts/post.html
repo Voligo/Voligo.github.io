@@ -1,56 +1,70 @@
 ---
 layout: default
 ---
-
-<div class="post-header mb2">
-  <h1>{{ page.title }}</h1>
-  <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span><br>
-  {% if page.update_date %}
-    <span class="post-meta">Updated: {{ page.update_date | date: "%b %-d, %Y" }}</span><br>
-  {% endif %}
-</div>
-
-<p class="post-summary">{{page.summary}}</p>
-
-<article class="post-content">
-  {% if page.link %}
-      {% include audioPlayer.html path=page.link %}
-  {% endif %}
-
-  {{ content }}
-</article>
-
-{% if site.show_sharing_icons %}
-  {% include share_buttons.html %}
-{% endif %}
-
-{% if site.show_post_footers %}
-  {% include post_footer.html %}
-{% endif %}
-
-{% if site.disqus_shortname %}
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-    var disqus_shortname  = '{{ site.disqus_shortname }}';
-    var disqus_identifier = '{{ page.id }}';
-
-    (function() {
-      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-{% endif %}
-
-{% if site.show_related_posts %}
-  <h3 class="related-post-title">Related Posts</h3>
-  {% for post in site.related_posts %}
-    <div class="post ml2">
-      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-        <h4 class="post-title">{{ post.title }}</h4>
-        <p class="post-summary">{{ post.summary }}</p>
-      </a>
+<div class="post">
+  <div class="row">
+    <div class="post-number col-xs-12 col-sm-1">
+      {{ page.number }}
     </div>
-  {% endfor %}
-{% endif %}
+    <div class="col-xs-12 col-sm-11">
+      <h2 class="post-title">
+        {{ page.title }}
+      </h2>
+      <audio style="width: 100%" src="{{ page.audio }}" controls>
+        <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p>
+      </audio>
+      <ul class="list-inline post-meta">
+        <li class="post-date">
+          <span class="post-date-title">投稿日：</span>
+          <span>{{ page.date | date: "%Y年%-m月%-d日" }}</span>
+        </li>
+        <li class="post-duration">
+          <span class="post-duration-title">時間：</span>
+          <span>{{ page.duration }}</span>
+        </li>
+      </ul>
+      <ul class="list-inline">
+        <li>
+          <!-- Twitter -->
+          <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="kumocast">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          <!-- end Twitter -->
+        </li>
+        <li>
+          <!-- HatenaBookmark -->
+          <a href="http://b.hatena.ne.jp/entry/{{ site.url  }}{{ page.url }}" class="hatena-bookmark-button" data-hatena-bookmark-title="{{ page.title }}" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+          <!-- end HatenaBookmark -->
+        </li>
+      </ul>
+      <p class="post-excerpt">
+        {{ page.description }}
+      </p>
+      {% if page.image %}
+        <div class="post-image">
+          <img src="{{ page.image }}" />
+        </div>
+      {% endif %}
+      <div class="post-members">
+        <h3 class="post-member">出演者</h3>
+        <ul class="list-inline">
+          {% for member in page.members %}
+            <li>
+              <a href="//twitter.com/{{ member }}">
+                <img class="member-img" src="{{ site.members[member].icon }}">
+                <p>
+                  {{ member }}
+                </p>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="post-shownotes">
+        {{ page.content | markdownify }}
+      </div>
+    </div>
+  </div>
+  {% comment %}
+  {% include notice.html %}
+  {% endcomment %}
+</div>
