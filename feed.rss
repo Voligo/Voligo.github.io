@@ -35,7 +35,7 @@
 				<link>{{ site.url }}/{{ post.url }}</link>
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
 				<guid isPermaLink="true">http://www.podtrac.com/pts/redirect.mp3/{{ post.link }}</guid>
-				<enclosure url="{{ post.link }}" length="{{ post.size }}" type="audio/mp3"/>
+				<enclosure url="http://ou7uptay6.bkt.clouddn.com/whiteeeen%20-%20あの頃～ジンジンバオヂュオニー～%20%28zerokoi%20ver.%29.mp3" length="0:05:42" type="audio/mp3"/>
 				<itunes:author>{{ post.speaker }}</itunes:author>
 				<itunes:subtitle></itunes:subtitle>
 				<itunes:duration>{{ post.length }}</itunes:duration>
