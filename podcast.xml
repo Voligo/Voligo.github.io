@@ -13,7 +13,7 @@ layout: null
     <media:keywords>萤火虫,小时光,Podcast</media:keywords>
     <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Music</media:category>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:image href="https://opinion-storage.s3.amazonaws.com/users/ying-huo-xiao-shi-guang/covers/7c6429d6-e2e0-43fd-9ca8-0a7faa74fcce.jpg" />
+    <itunes:image href="http://ou7uptay6.bkt.clouddn.com/logo.jpg" />
     <itunes:keywords>萤火虫,小时光,Podcast</itunes:keywords>
     <itunes:subtitle>有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。</itunes:subtitle>
     <itunes:summary>有些歌被翻唱之后成为了经典，有些经典被翻唱之后却另有一番味道。静静地聆听，一秒倾心。</itunes:summary>
