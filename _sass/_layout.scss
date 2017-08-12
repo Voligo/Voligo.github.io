@@ -73,7 +73,7 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: #cacaca;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
@@ -153,7 +153,7 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit 0;
-    background: #f0e9e4;
+    background: #bde6ff;
 
     p {
         margin: 0;
@@ -356,7 +356,7 @@
     
 
     li {
-        background: #fff;
+        background: #f1fff4;
         box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
         padding: 2%;
         margin-bottom: 50px;
