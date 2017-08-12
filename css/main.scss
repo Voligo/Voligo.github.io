@@ -6,27 +6,26 @@
 
 
 // Our variables
-$base-font-family: avenir,'avenir next',helvetica,arial,sans-serif;
+$base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.6;
+$base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #444;
-$background-color: #fff;
-$brand-color:      #004b8c;
+$text-color:       #111;
+$background-color: #f8f8f6;
+$brand-color:      #9e848d;
 
-$grey-color:       #828282;
+$grey-color:       #9e848d;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark:  darken($grey-color, 35%);
 
 // Width of the content area
-$content-width:    600px;
+$content-width:    800px;
 
-$sm-margin:        8px;
-$md-margin:        16px;
-$lg-margin:        36px;
+$on-palm:          600px;
+$on-laptop:        800px;
 
 
 
@@ -49,11 +48,5 @@ $lg-margin:        36px;
 @import
         "base",
         "layout",
-        "header",
-        "notice",
-        "index",
-        "post",
-        "page",
-        "footer",
         "syntax-highlighting"
 ;
